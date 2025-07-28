@@ -81,13 +81,32 @@
     </div>
   </div>
 
-<h2>Contact Us</h2>
-<form action="https://formsubmit.co/aknk1163@gmail.com" method="POST">
-  <input type="text" name="name" placeholder="Your Name" required><br><br>
-  <input type="email" name="email" placeholder="Your Email" required><br><br>
-  <textarea name="message" placeholder="Your message or order..." rows="5" required></textarea><br><br>
-  <button type="submit">Send</button>
+<hr>
+<h2 style="color: #2e7d32;">Place Your Order</h2>
+<form action="https://formsubmit.co/aknk1163@gmail.com" method="POST" style="max-width: 400px;">
+  <label>Name:</label><br>
+  <input type="text" name="name" placeholder="Your Name" required style="width: 100%; padding: 10px;"><br><br>
+
+  <label>Email:</label><br>
+  <input type="email" name="email" placeholder="Your Email" required style="width: 100%; padding: 10px;"><br><br>
+
+  <label>Product:</label><br>
+  <select name="product" required style="width: 100%; padding: 10px;">
+    <option value="">Select a product</option>
+    <option value="Mint">Mint – ₹10 per bunch</option>
+    <option value="Coriander">Coriander – ₹15 per bunch</option>
+    <option value="Both">Both Mint & Coriander</option>
+  </select><br><br>
+
+  <label>Quantity (in bunches):</label><br>
+  <input type="number" name="quantity" placeholder="e.g. 2" min="1" required style="width: 100%; padding: 10px;"><br><br>
+
+  <label>Delivery Address:</label><br>
+  <textarea name="address" rows="3" placeholder="Enter your full delivery address..." required style="width: 100%; padding: 10px;"></textarea><br><br>
+
+  <button type="submit" style="padding: 12px 25px; background-color: #2e7d32; color: white; border: none; font-size: 16px;">Place Order</button>
 </form>
+
 
   <footer>
     <p>Contact us at aknk1163@gmail.com | Delivery near Whitefield</p>
