@@ -2,120 +2,44 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Kote Farm</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #f5fff5;
-      color: #2e7d32;
-    }
-
-    header {
-      background-color: #2e7d32;
-      color: white;
-      padding: 1rem;
-      text-align: center;
-    }
-
-    .container {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 1rem;
-      padding: 2rem;
-    }
-
-    .item {
-      background: white;
-      border-radius: 12px;
-      box-shadow: 0 0 12px rgba(0,0,0,0.1);
-      overflow: hidden;
-      text-align: center;
-      padding: 1rem;
-    }
-
-    .item img {
-      width: 100%;
-      height: 200px;
-      object-fit: cover;
-      border-radius: 12px;
-    }
-
-    .item h2 {
-      margin: 1rem 0 0.5rem;
-    }
-
-    .item p {
-      font-size: 1.1rem;
-      margin: 0.5rem 0;
-    }
-
-    footer {
-      background-color: #2e7d32;
-      color: white;
-      text-align: center;
-      padding: 1rem;
-      margin-top: 2rem;
-    }
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kote Farm - Order Form</title>
 </head>
-<body>
+<body style="font-family: Arial, sans-serif; padding: 20px; background-color: #f8fff6;">
 
-  <header>
-    <h1>Mint Farm</h1>
-    <p>Fresh Mint & Coriander Delivered to Your Doorstep</p>
-  </header>
+  <h2>Order Fresh Farm Produce</h2>
 
-  <div class="container">
-    <div class="item">
-      <img src="Mint.jpg.jpg" alt="Mint Bunch">
-      <h2>Mint</h2>
-      <p>₹10 per bunch</p>
-    </div>
+  <form action="https://formsubmit.co/aknk1163@gmail.com" method="POST">
+    <!-- FormSubmit options -->
+    <input type="hidden" name="_captcha" value="false">
+    <input type="hidden" name="_next" value="https://yourwebsite.com/thank-you.html">
 
-    <div class="item">
-      <img src="Coren.jpg.jpg" alt="Coriander Bunch">
-      <h2>Coriander</h2>
-      <p>₹15 per bunch</p>
-    </div>
-  </div>
+    <label for="name">Name:</label><br />
+    <input type="text" id="name" name="name" required><br /><br />
 
+    <label for="email">Email:</label><br />
+    <input type="email" id="email" name="email" required><br /><br />
 
-<h2 style="color: #2e7d32;">Place Your Order</h2>
-<form action="https://formsubmit.co/aknk1163@gmail.com" method="POST" style="max-width: 400px;">
-  <label>Name:</label><br>
-  <input type="text" name="name" placeholder="Your Name" required style="width: 100%; padding: 10px;"><br><br>
+    <label for="whatsapp">WhatsApp Number:</label><br />
+    <input type="text" id="whatsapp" name="whatsapp" required><br /><br />
 
-  <label>Email:</label><br>
-  <input type="email" name="email" placeholder="Your Email" required style="width: 100%; padding: 10px;"><br><br>
+    <label for="product">Select Product:</label><br />
+    <select id="product" name="product" required>
+      <option value="">-- Select --</option>
+      <option value="Mint (Pudina) 500g - ₹25">Mint (Pudina) 500g - ₹25</option>
+      <option value="Coriander (Dhaniya) 500g - ₹20">Coriander (Dhaniya) 500g - ₹20</option>
+      <option value="Pomegranate 01 KG - ₹150">Pomegranate 01 KG - ₹150</option>
+      <option value="Papaya 01 KG - ₹30">Papaya 01 KG - ₹30</option>
+    </select><br /><br />
 
-  <label>Number:</label><br>
-  <input type="number" name="number" placeholder="Your Number" required style="width: 100%; padding: 10px;"><br><br>
+    <label for="quantity">Quantity (Kg/pcs):</label><br />
+    <input type="text" id="quantity" name="quantity" required><br /><br />
 
-  <label>Product:</label><br>
-  <select name="product" required style="width: 100%; padding: 10px;">
-    <option value="">Select a product</option>
-    <option value="Mint">Mint – ₹10 per bunch</option>
-    <option value="Coriander">Coriander – ₹15 per bunch</option>
-    <option value="Pomegranate">Pomegranate – ₹100 per kg</option>
-    <option value="Papaya">Papaya – ₹30 per kg</option>
-    <option value="Combo">Combo – Multiple Items</option>
-  </select><br><br>
+    <label for="address">Delivery Address:</label><br />
+    <textarea id="address" name="address" rows="4" required></textarea><br /><br />
 
-  <label>Quantity (mention unit – bunch/kg):</label><br>
-  <input type="text" name="quantity" placeholder="e.g. 2 bunches, 1 kg" required style="width: 100%; padding: 10px;"><br><br>
-
-  <label>Delivery Address:</label><br>
-  <textarea name="address" rows="3" placeholder="Enter your full delivery address..." required style="width: 100%; padding: 10px;"></textarea><br><br>
-
-  <button type="submit" style="padding: 12px 25px; background-color: #2e7d32; color: white; border: none; font-size: 16px;">Place Order</button>
-</form>
-
-
-  <footer>
-    <p>Contact us at aknk1163@gmail.com | Delivery near Whitefield</p>
-  </footer>
+    <button type="submit">Place Order</button>
+  </form>
 
 </body>
 </html>
