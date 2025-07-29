@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Kote Farm</title>
+  <title>Mint Farm</title>
   <style>
     body {
       margin: 0;
@@ -51,6 +51,31 @@
       margin: 0.5rem 0;
     }
 
+    form {
+      max-width: 400px;
+      margin: auto;
+      padding: 2rem;
+    }
+
+    form input, form select, form textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+
+    form button {
+      padding: 12px 25px;
+      background-color: #2e7d32;
+      color: white;
+      border: none;
+      font-size: 16px;
+      cursor: pointer;
+      border-radius: 6px;
+    }
+
     footer {
       background-color: #2e7d32;
       color: white;
@@ -58,13 +83,25 @@
       padding: 2rem;
       margin-top: 4rem;
     }
+
+    hr {
+      margin: 4rem auto;
+      border: 0;
+      border-top: 1px solid #ccc;
+      width: 80%;
+    }
+
+    h2 {
+      text-align: center;
+      color: #2e7d32;
+    }
   </style>
 </head>
 <body>
 
   <header>
-    <h1>Mint Farm</h1>
-    <p>Fresh Mint & Coriander Delivered to Your Doorstep</p>
+    <h1>Kot Farm</h1>
+    <p>Fresh Vegetables & Fruits Delivered to Your Doorstep</p>
   </header>
 
   <div class="container">
@@ -79,56 +116,51 @@
       <h2>Coriander</h2>
       <p>₹15 per bunch</p>
     </div>
-  </div>
 
-
-<div class="pomegranet">
     <div class="item">
-      <img src="Poma.jpg.jpg" alt="Pomegranet KG">
-      <h2>Pomegranet</h2>
+      <img src="Poma.jpg.jpg" alt="Pomegranate KG">
+      <h2>Pomegranate</h2>
       <p>₹100 per KG</p>
     </div>
 
     <div class="item">
-      <img src="Popaya.jpg.jpg" alt="Popaya KG">
-      <h2>Popaya</h2>
+      <img src="Popaya.jpg.jpg" alt="Papaya KG">
+      <h2>Papaya</h2>
       <p>₹30 per KG</p>
     </div>
   </div>
 
+  <hr>
 
-<hr>
-<h2 style="color: #2e7d32;">Place Your Order</h2>
-<form action="https://formsubmit.co/aknk1163@gmail.com" method="POST" style="max-width: 400px;">
-  <label>Name:</label><br>
-  <input type="text" name="name" placeholder="Your Name" required style="width: 100%; padding: 10px;"><br><br>
+  <h2>Place Your Order</h2>
+  <form action="https://formsubmit.co/aknk1163@gmail.com" method="POST">
+    <label>Name:</label>
+    <input type="text" name="name" placeholder="Your Name" required>
 
-  <label>Email:</label><br>
-  <input type="email" name="email" placeholder="Your Email" required style="width: 100%; padding: 10px;"><br><br>
+    <label>Email:</label>
+    <input type="email" name="email" placeholder="Your Email" required>
 
-  <label>Number:</label><br>
-  <input type="number" name="number" placeholder="Your Number" required style="width: 100%; padding: 10px;"><br><br>
+    <label>Number:</label>
+    <input type="number" name="number" placeholder="Your Number" required>
 
-  <label>Product:</label><br>
-  <select name="product" required style="width: 100%; padding: 10px;">
-    <option value="">Select a product</option>
-    <option value="Mint">Mint – ₹10 per bunch</option>
-    <option value="Coriander">Coriander – ₹15 per bunch</option>
-    <option value="Pomegranet">Pomegranet – ₹100 per KG</option>
-    <option value="Popaya">Popaya – ₹30 per KG</option>
+    <label>Product:</label>
+    <select name="product" required>
+      <option value="">Select a product</option>
+      <option value="Mint">Mint – ₹10 per bunch</option>
+      <option value="Coriander">Coriander – ₹15 per bunch</option>
+      <option value="Pomegranate">Pomegranate – ₹100 per KG</option>
+      <option value="Papaya">Papaya – ₹30 per KG</option>
+      <option value="All">Mint, Coriander, Pomegranate & Papaya</option>
+    </select>
 
-    <option value="All">Mint Coriander Pomagranet & Popaya</option>
-  </select><br><br>
+    <label>Quantity (in bunches or KG):</label>
+    <input type="number" name="quantity" placeholder="e.g. 2" min="1" required>
 
-  <label>Quantity (in bunches):</label><br>
-  <input type="number" name="quantity" placeholder="e.g. 2" min="1" required style="width: 100%; padding: 10px;"><br><br>
+    <label>Delivery Address:</label>
+    <textarea name="address" rows="3" placeholder="Enter your full delivery address..." required></textarea>
 
-  <label>Delivery Address:</label><br>
-  <textarea name="address" rows="3" placeholder="Enter your full delivery address..." required style="width: 100%; padding: 10px;"></textarea><br><br>
-
-  <button type="submit" style="padding: 12px 25px; background-color: #2e7d32; color: white; border: none; font-size: 16px;">Place Order</button>
-</form>
-
+    <button type="submit">Place Order</button>
+  </form>
 
   <footer>
     <p>Contact us at aknk1163@gmail.com | Delivery near Whitefield</p>
