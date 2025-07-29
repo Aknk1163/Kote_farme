@@ -3,78 +3,142 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Mint Farm - Fresh Greens</title>
+  <title>Mint Farm</title>
+  <title>Kote Farm</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
-      background: #f2fff2;
       margin: 0;
-      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f5fff5;
+      color: #2e7d32;
     }
+
     header {
-      background-color: #4CAF50;
+      background-color: #2e7d32;
       color: white;
+      padding: 1rem;
       text-align: center;
-      padding: 20px;
     }
+
     .container {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      padding: 20px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1rem;
+      padding: 2rem;
     }
-    .card {
-      background-color: white;
-      width: 300px;
-      margin: 15px;
-      border-radius: 10px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+
+    .item {
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 0 12px rgba(0,0,0,0.1);
       overflow: hidden;
-      transition: 0.3s;
+      text-align: center;
+      padding: 1rem;
     }
-    .card:hover {
-      box-shadow: 0 8px 16px rgba(0,0,0,0.2);
-    }
-    .card img {
+
+    .item img {
       width: 100%;
       height: 200px;
       object-fit: cover;
+      border-radius: 12px;
     }
-    .card-body {
-      padding: 15px;
+
+    .item h2 {
+      margin: 1rem 0 0.5rem;
+    }
+
+    .item p {
+      font-size: 1.1rem;
+      margin: 0.5rem 0;
+    }
+
+    footer {
+      background-color: #2e7d32;
+      color: white;
       text-align: center;
-    }
-    .card-body h3 {
-      margin: 10px 0;
-    }
-    .price {
-      font-size: 18px;
-      color: #4CAF50;
+      padding: 1rem;
+      margin-top: 2rem;
     }
   </style>
 </head>
 <body>
+
   <header>
-    <h1>🌿 Mint Farm</h1>
-    <p>Fresh Mint and Coriander Delivered to Your Door</p>
+    <h1>Mint Farm</h1>
+    <p>Fresh Mint & Coriander Delivered to Your Doorstep</p>
   </header>
 
   <div class="container">
-    <div class="card">
-      <img src="mint.jpg" alt="Mint">
-      <div class="card-body">
-        <h3>Mint</h3>
-        <p class="price">₹10 per bunch</p>
-      </div>
+    <div class="item">
+      <img src="Mint.jpg.jpg" alt="Mint Bunch">
+      <h2>Mint</h2>
+      <p>₹10 per bunch</p>
     </div>
 
-    <div class="card">
-      <img src="coriander.jpg" alt="Coriander">
-      <div class="card-body">
-        <h3>Coriander</h3>
-        <p class="price">₹15 per bunch</p>
-      </div>
+    <div class="item">
+      <img src="Coren.jpg.jpg" alt="Coriander Bunch">
+      <h2>Coriander</h2>
+      <p>₹15 per bunch</p>
     </div>
   </div>
+
+
+<div class="pomegranet">
+    <div class="item">
+      <img src="Poma.jpg.jpg" alt="Pomegranet KG">
+      <h2>Pomegranet</h2>
+      <p>₹100 per KG</p>
+    </div>
+
+    <div class="item">
+      <img src="Papaya.jpg.jpg" alt="Papaya KG">
+      <h2>Papaya</h2>
+      <p>₹30 per KG</p>
+    </div>
+  </div>
+
+
+<hr>
+<h2 style="color: #2e7d32;">Place Your Order</h2>
+<form action="https://formsubmit.co/aknk1163@gmail.com" method="POST" style="max-width: 400px;">
+  <label>Name:</label><br>
+  <input type="text" name="name" placeholder="Your Name" required style="width: 100%; padding: 10px;"><br><br>
+
+  <label>Email:</label><br>
+  <input type="email" name="email" placeholder="Your Email" required style="width: 100%; padding: 10px;"><br><br>
+
+  <label>Number:</label><br>
+  <input type="number" name="number" placeholder="Your Number" required style="width: 100%; padding: 10px;"><br><br>
+
+  <label>Product:</label><br>
+  <select name="product" required style="width: 100%; padding: 10px;">
+    <option value="">Select a product</option>
+    <option value="Mint">Mint – ₹10 per bunch</option>
+    <option value="Coriander">Coriander – ₹15 per bunch</option>
+    <option value="Pomegranet">Pomegranet – ₹100 per KG</option>
+    <option value="Papaya">Papaya – ₹30 per KG</option>
+
+    <option value="All">Both Mint Coriander Pomagranet & Papaya</option>
+    <option value="Pomegranate">Pomegranate – ₹100 per kg</option>
+    <option value="Papaya">Papaya – ₹30 per kg</option>
+    <option value="Combo">Combo – Multiple Items</option>
+  </select><br><br>
+
+  <label>Quantity (in bunches):</label><br>
+  <input type="number" name="quantity" placeholder="e.g. 2" min="1" required style="width: 100%; padding: 10px;"><br><br>
+  <label>Quantity (mention unit – bunch/kg):</label><br>
+  <input type="text" name="quantity" placeholder="e.g. 2 bunches, 1 kg" required style="width: 100%; padding: 10px;"><br><br>
+
+  <label>Delivery Address:</label><br>
+  <textarea name="address" rows="3" placeholder="Enter your full delivery address..." required style="width: 100%; padding: 10px;"></textarea><br><br>
+
+  <button type="submit" style="padding: 12px 25px; background-color: #2e7d32; color: white; border: none; font-size: 16px;">Place Order</button>
+</form>
+
+
+  <footer>
+    <p>Contact us at aknk1163@gmail.com | Delivery near Whitefield</p>
+  </footer>
+
 </body>
 </html>
